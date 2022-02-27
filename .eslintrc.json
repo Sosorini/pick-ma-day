@@ -38,17 +38,16 @@
                 "tsx": "never"
             }
         ],
-        "import/prefer-default-export": "off"
+        "import/prefer-default-export": "off",
+        "react/prop-types": ["off"],
+        "no-unused-vars": "warn", // 정의 후 사용하지 않은 변수는 경고만 하기
+        "no-console": 0, // console 사용하기
+        "react/function-component-definition": [2, {
+            "namedComponents": ["function-expression","arrow-function","function-declaration"],
+            "unnamedComponents": "function-expression"
+        }]
     },
     "settings": {
-        // "import/parsers": { "@typescript-eslint/parser": [".ts", ".tsx"] },
-        // "typescript": {
-        //     // "alwaysTryTypes": true,
-        //     // "directory": "./path/to/folder",
-        //     // "directory": "./packages/*/tsconfig.json",
-        //     "directory": ["./packages/module-a/tsconfig.json", "./packages/module-b/tsconfig.json"]
-        // }
-    
         "import/resolver": {
             "typescript": {}
         }
