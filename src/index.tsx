@@ -1,13 +1,13 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import App from '@layouts/App';
-import { BrowserRouter } from 'react-router-dom';
+import App from 'layouts/App/index';
+import { BrowserRouter as Router } from 'react-router-dom';
 // import App from './layouts/App';
 
 render(
-  <BrowserRouter>
+  <Router>
     <App />
-  </BrowserRouter>,
-  document.querySelector('#app'),
+  </Router>,
+  document.getElementById('root'),
 );

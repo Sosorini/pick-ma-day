@@ -20,19 +20,6 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": ".",
-    "paths": {
-      "@hooks/*": ["hooks/*"],
-      "@components/*": ["components/*"],
-      "@layouts/*": ["layouts/*"],
-      "@pages/*": ["pages/*"],
-      "@utils/*": ["utils/*"],
-      "@typings/*": ["typings/*"]
-    },
+    "baseUrl": "src"
   },
-  // "include": [
-  //   "src",
-    // "craco.config.js"
-  // ],
-  // "extends": "./tsconfig.paths.json",
 }
