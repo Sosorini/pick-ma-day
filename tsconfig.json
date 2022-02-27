@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "esModuleInterop": true,    // import * as React from 'react';  >> import React from 'react' 로 가져오겠다.
+    "sourceMap": true,          // 에러 났을 떄 에러 난 위치를 찾아가겠다.
+    "target": "es5", // js로 변환 시 , es5 문법을 따라가겠다.
     "lib": [
       "dom",
       "dom.iterable",
@@ -8,19 +10,29 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "module": "esnext", // esnext > 최신 js 모듈을 사용하겠다.
     "moduleResolution": "node",
-    "resolveJsonModule": true,
+    "resolveJsonModule": true, // import json 파일을 사용하는 것을 허용하겠다.
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@hooks/*": ["hooks/*"],
+      "@components/*": ["components/*"],
+      "@layouts/*": ["layouts/*"],
+      "@pages/*": ["pages/*"],
+      "@utils/*": ["utils/*"],
+      "@typings/*": ["typings/*"]
+    },
   },
-  "include": [
-    "src"
-  ]
+  // "include": [
+  //   "src",
+    // "craco.config.js"
+  // ],
+  // "extends": "./tsconfig.paths.json",
 }
